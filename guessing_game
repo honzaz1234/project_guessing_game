@@ -1,13 +1,13 @@
-function guessinggame(){
-    no_of_files=$(pwd | ls | wc -l)
+function guess_game(){
+    n_files=$(pwd | ls | wc -l)
     while true;
     do
         echo "Please guess a number of files:"
         read  number
-        if [ $number -lt $no_of_files ]
+        if [ $number -lt $n_files ]
         then
             echo "Your guess is less than the actual number of files"
-        elif [ $number -gt $no_of_files ]
+        elif [ $number -gt $n_files ]
         then
             echo "Your guess is more than the actual number of files"
         else
@@ -18,4 +18,4 @@ function guessinggame(){
 }
 
 echo "Guess how many files are there in current directory?"
-guessinggame
+guess_game
